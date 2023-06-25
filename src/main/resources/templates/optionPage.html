@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatGPT Options</title>
+</head>
+<body>
+<h1>Choose an Option</h1>
+
+<form th:action="@{/ending1}" method="get">
+  <input type="hidden" name="result1" th:value="${result1}">
+  <input type="hidden" name="option1" th:value="${option1}">
+  <button type="submit" name="option" value="1">Option 1</button>
+</form>
+
+<form th:action="@{/ending2}" method="get">
+  <input type="hidden" name="result1" th:value="${result1}">
+  <input type="hidden" name="option2" th:value="${option2}">
+  <button type="submit" name="option" value="2">Option 2</button>
+</form>
+
+<div>
+  <h2>Option 1</h2>
+  <p th:text="${option1}"></p>
+</div>
+
+<div>
+  <h2>Option 2</h2>
+  <p th:text="${option2}"></p>
+</div>
+</body>
+</html>

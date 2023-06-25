@@ -1,0 +1,32 @@
+<!-- characterFormPage.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Form</title>
+</head>
+<body>
+<h2>Character Information</h2>
+<form th:action="@{/character/result1}" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="sex">Sex:</label>
+  <input type="text" id="sex" name="sex" required><br><br>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age" required><br><br>
+
+  <label for="nation">Nation:</label>
+  <input type="text" id="nation" name="nation" required><br><br>
+
+  <label for="appearance">Appearance:</label>
+  <input type="text" id="appearance" name="appearance" required><br><br>
+
+  <label for="features">Features:</label>
+  <input type="text" id="features" name="features" required><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

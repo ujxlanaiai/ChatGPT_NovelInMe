@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    include: API-KEY
+
+chatgpt:
+  api-key: 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

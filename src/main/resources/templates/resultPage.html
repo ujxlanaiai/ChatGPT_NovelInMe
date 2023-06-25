@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Result Page</title>
+</head>
+<body>
+<h2>Story:</h2>
+<p th:text="${result1}"></p>
+
+<form th:action="@{/options}" method="get">
+  <input type="hidden" name="result1" th:value="${result1}">
+  <button type="submit">Next</button>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Ending Page</title>
+</head>
+<body>
+<h2>Ending:</h2>
+<p th:text="${ending1}"></p>
+
+<form th:action="@{/finalResult1}" method="get">
+  <input type="hidden" name="result1" th:value="${result1}">
+  <input type="hidden" name="option1" th:value="${option1}">
+  <input type="hidden" name="ending1" th:value="${ending1}">
+  <button type="submit" name="finalEnding" value="3">Go see Story</button>
+</form>
+
+</body>
+</html>
