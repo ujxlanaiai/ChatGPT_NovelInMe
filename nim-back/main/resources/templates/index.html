@@ -1,21 +1,27 @@
 <!-- FirstPage.html -->
+<!--/index-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <title>Novel In Me</title>
-  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.0.0-beta3/css/bootstrap.min.css}" />
-</head>
-<body>
-<div class="container">
-  <div class="row mt-5">
-    <div class="col-md-12 text-center">
-      <h1>Novel In Me</h1>
-      <a href="/selectChar" class="btn btn-primary btn-lg mt-3">Start</a>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Novel In Me</title>
+    <link
+      rel="stylesheet"
+      th:href="@{/webjars/bootstrap/5.0.0-beta3/css/bootstrap.min.css}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-12 text-center">
+          <h1>Novel In Me</h1>
+          <a href="/selectChar" class="btn btn-primary btn-lg mt-3">Start</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<script th:src="@{/webjars/bootstrap/5.0.0-beta3/js/bootstrap.min.js}"></script>
-</body>
+    <script
+      th:src="@{/webjars/bootstrap/5.0.0-beta3/js/bootstrap.min.js}"
+    ></script>
+  </body>
 </html>
