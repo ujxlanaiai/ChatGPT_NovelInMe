@@ -9,3 +9,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Bookmark {
+id Int @id @default(autoincrement())
+content String
+article Article @relation(fields: [articleId], references: [id])
+articleId Int
+}

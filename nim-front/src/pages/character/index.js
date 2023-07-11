@@ -1,13 +1,16 @@
 import Image from "next/image";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 export default function Character() {
+  const { push } = useRouter();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      // Make a POST request to the backend endpoint
-      const response = await axios.post("/selectChar");
+      // Make a GET request to the API route
+      const response = await axios.get("/api/selectChar");
       // Handle the response or perform any necessary actions
       console.log(response.data);
     } catch (error) {
@@ -40,8 +43,8 @@ export default function Character() {
 
           <form
             className="flex py-10"
-            action="/character"
-            method="get"
+            // action="/character"
+            // method="get"
             onSubmit={handleSubmit}
           >
             <div className="border-r flex-col items-center px-40 space-y-1.5">
@@ -53,6 +56,7 @@ export default function Character() {
                 height={50}
               />
               <input
+                onClick={() => push("/character/set?option=makeOwn")}
                 className="bg-violet-100 rounded-lg font-bold text-violet-700 px-5"
                 type="submit"
                 value={`MAKE OWN\nCHARACTER`}
@@ -67,6 +71,7 @@ export default function Character() {
                 height={50}
               />
               <input
+                onClick={() => push("/character/set?option=useOriginal")}
                 className="bg-violet-100 rounded-lg font-bold text-violet-700 px-5"
                 type="submit"
                 value={`USE ORIGINAL\nCHARACTER`}
